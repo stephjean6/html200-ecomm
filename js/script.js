@@ -48,8 +48,15 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ];
-
+/*
 for (i=0; i < products.length; i++) {
   
  console.log(products[i].name + products[i].price +  products[i].description);
+}
+*/
+
+
+function capture(){
+ console.log(document.Filter.filter.value)
+  event.preventDefault();
 }
