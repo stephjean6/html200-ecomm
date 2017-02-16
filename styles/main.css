@@ -10,8 +10,20 @@ body {
 aside {
   flex-flow: row;
 }
+nav {
+  background-color: slateblue;
+  width: 100%;
+  font-size: 1.5rem;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+}
 header {
-  background-color: black;
+  background-color: slateblue;
   font-size: 1.2rem;
   height: 30%;
   width: 100%;
@@ -22,24 +34,23 @@ header a {
   font-size: 1.2rem;
   color: white; 
   padding: 0 1em 5em 0;
-  float: right;
 }
 header h1 {
   color: white;
   letter-spacing: 1px;
-  clear: right;
+  text-align: right;
   font-size: 3rem;
   padding: 0;
-  text-transform: none;
  }
 h2 {
-  color: red;
-  font-size: 2rem;
+  color: slateblue;
+  font-size: 4rem;
   align-content:center;
   text-align: center;
 }
 div.item-container {
-  background-color: black;
+  background-color: lightsteelblue;
+  opacity: 50%;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -47,100 +58,22 @@ div.item-container {
   padding: 20px;
 }
 div.item {
-  color: aqua;
+  color: lightsteelblue;
   flex-wrap: wrap;
   align-content: center;
   max-width: 20em;
 }
-div.paragraphs {
-  font-size: 1.5rem;
+div.item p {
+  font-size: 1rem;
+  color: dimgray;
+  align-content: center;
 }
-img {
+div.item h2{
+  font-size: 1.5rem;
+  color: slateblue;  
+}
+div.item img {
   max-width: 10em;
   height: auto;
+  align-items: stretch;
 }
-/*Reference CSS for practice:
-
-
-header p {
-  color: darkgray;
-  font-size: 1.5rem;
-}
-nav {
-  background-color: darkgray;
-  width: 100%;
-  font-size: 1.5rem;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-around;
-}
-li {
-  float:left;
-}
-li a {
-  display: block;
-  color: purple;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-emphasis: bold;
-  text-decoration: underline;
-}
-*/
-
-/*
-div.aside {
-  width: 35%;
-  float: left;
-  overflow: hidden;
-  margin: 20px;
-}
-aside {
-  border-width: medium; 
-  border-style: solid;
-  border-color: darkgray;
-  padding: 10px 5px 25px 5px;
-  text-align: center;
-}
-aside figurecaption {
-  font-size: 24px;
-  text-align: center;
-}
-aside p {
-  text-align: left;
-  font-size: 16px;
-}
-aside a {
-  float: right;
-  color: red;
-  }
-aside h2 {
-  padding: 2px 0 0 0;
-}
-
-footer {
-  background-color: black;
-  color: white; 
-  height: 10rem;
-  clear: both;
-}
-footer address {
-  text-align: left;
-  padding: 20px 0 0 10px;
-  line-height: 20px;
-}
-footer p {
-  text-align: center;
-  padding: 40 0 0 0;
-  border: 0;
-  margin: 0;
-}
-footer a {
-  color: red;
-}
-
-*/
