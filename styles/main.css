@@ -9,6 +9,14 @@ body {
 }
 div.item-container {
   background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+/*
+div.item-container {
+  background-color: black;
   color: white;
   margin: 20px 0 20px 0;
   padding: 20px;
@@ -16,9 +24,18 @@ div.item-container {
   float: right;
   overflow: hidden;
 }
+*/
+
 div.item {
   color: aqua;
+  flex-wrap: wrap;
+  align-content: center;
+  max-width: 20em;
 }
+aside {
+  flex-flow: 
+}
+/*
 aside {
   border-width: medium; 
   border-style: solid;
@@ -29,6 +46,7 @@ aside {
   float: left;
   overflow: hidden;
 }
+*/
 header {
   background-color: black;
   font-size: 1.2rem;
@@ -39,7 +57,7 @@ header {
 }
 header a {
   font-size: 1.2rem;
-  color: red; 
+  color: white; 
   padding: 0 1em 5em 0;
   float: right;
 }
@@ -54,12 +72,15 @@ h2 {
   color: red;
   font-size: 2rem;
   align-content:center;
+  text-align: center;
 }
-
 img {
-    max-width: 100%;
-    height: auto;
-    clear: right;
+  max-width: 10em;
+  height: auto;
+  border-radius: 50%;
+}
+div.paragraphs {
+  font-size: 1.5rem;
 }
 /*Reference CSS for practice:
 
@@ -92,13 +113,9 @@ li a {
   text-emphasis: bold;
   text-decoration: underline;
 }
-div.paragraphs {
-  width: 55%;
-  float: left;
-  overflow: hidden;
-  margin: 20px;
-  font-size: 1.5rem;
-}
+*/
+
+/*
 div.aside {
   width: 35%;
   float: left;
