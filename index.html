@@ -1,99 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Winter Scarves</title>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/normalize.css">
+  <head>
+    <title>Winter Scarves</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Playing around with Bootstrap!
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
   <!-- replace with your personal Font Awesome CDN link -->
-  <script src="https://use.fontawesome.com/5d1b72a606.js"></script>
-</head>
+    <script src="https://use.fontawesome.com/5d1b72a606.js"></script>
+  </head>
 
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Hats</a></li>
-        <li><a href="#">Gloves</a></li>
-        <li><a href="#">Scarves</a></li>
-        <li class="cart-info">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </li>
-      </ul>
-    </nav>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Hats</a></li>
+          <li><a href="#">Gloves</a></li>
+          <li><a href="#">Scarves</a></li>
+          <li class="cart-info">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </nav>
+      <h1>Winter Wear Warehouse</h1>
+    </header>
 
-    <h1>Winter Wear Warehouse</h1>
-  </header>
-
-  <aside>
-    <form name="Filter" onSubmit="capture();">
-      <label>Filter By:
-        <select name="filter">
-          <option value="">Choose One</option>
-          <option value="price">Price</option>
-          <option value="name">Name</option>
-        </select>
-      </label>
-      <input type="submit" value="Sort">
-    </form>
-  </aside>
-  <section>
-    <h2>Scarves</h2>
-    <div class="item-container">
-      <div class="item">
-        <h2>Etro</h2>
-        <p>Best blue scarf ever...soft as silk!</p>
-        <p>Luxurious silk scarf with subtle paisley pattern. 100% silk</p>
-        <img src="images/etro.png" alt="Etro scarf">
-      </div> 
-      <div class="item">
-        <h2>Fringed-Plaid</h2>
-        <p>Make your fellow Scotsman proud!</p>
-        <p>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
-        <img src="images/fringed-plaid.jpeg" alt="Fringed-Plaid scarf">
-      </div>
-      <div class="item">
-        <h2>Multi-color</h2>
+    <aside>
+      <form name="Filter" onSubmit="capture();">
+        <label>Filter By:
+          <select name="filter">
+            <option value="">Choose One</option>
+            <option value="price">Price</option>
+            <option value="name">Name</option>
+          </select>
+        </label>
+        <input type="submit" value="Sort">
+      </form>
+    </aside>
+    <section>
+      <h2>Scarves</h2>
+      <div class="item-container">
+        <div class="item">
+          <h2>Etro</h2>
+          <p>Best blue scarf ever...soft as silk!</p>
+          <p>Luxurious silk scarf with subtle paisley pattern. 100% silk</p>
+          <img srcset="images/etro-1280w.png 1280w, images/etro-800w.png 800w, images/etro-400w.png 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/etro-800w.png"
+              alt="Etro scarf!">
+        </div> 
+        <div class="item">
+          <h2>Fringed-Plaid</h2>
+          <p>Make your fellow Scotsman proud!</p>
+          <p>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
+          <img srcset="images/fringed-plaid-1280w.jpg 1280w, images/fringed-plaid-800w.jpg 800w, images/fringed-plaid-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/fringed-plaid-800w.jpg"
+              alt="Fringed-plaid scarf!">     
+        </div>
+        <div class="item">
+          <h2>Multi-color</h2>
           <p>Magnificent orange</p>
-          <img src="images/multi-color.jpeg" alt="Multi-color scarf">
-      </div>
-      <div class="item">
-        <h2>Northern Lights</h2>
+          <p>This scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit. Soft and lush, it is your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic</p>
+          <img srcset="images/multi-color-1280w.jpg 1280w, images/multi-color-800w.jpg 800w, images/multi-color-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/multi-color-800w.jpg"
+              alt="Multi-color scarf!"> 
+        </div>
+        <div class="item">
+          <h2>Northern Lights</h2>
           <p>Sublime!</p>
           <p>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</p>
-          <img src="images/northern-lights.jpg" alt="Northern Lights scarf">
-      </div>
-      <div class="item">
-        <h2>Ombre Infinity</h2>
+          <img srcset="images/northern-lights-1280w.jpg 1280w, images/northern-lights-800w.jpg 800w, images/northern-lights-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/northern-lights-800w.jpg"
+              alt="Northern lights scarf!">
+        </div>
+        <div class="item">
+          <h2>Ombre Infinity</h2>
           <p>It's neverending!</p>
           <p>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</p>
-          <img src="images/ombre-infinity.jpg" alt="Ombre infinity scarf">
-      </div>
-      <div class="item">
-        <h2>Reversible Plaid</h2>
+          <img srcset="images/ombre-infinity-1280w.jpg 1280w, images/ombre-infinity-800w.jpg 800w, images/ombre-infinity-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/ombre-infinity-800w.jpg" 
+              alt="Ombre infinity scarf!">
+        </div>
+        <div class="item">
+          <h2>Reversible Plaid</h2>
           <p>Two scarves in one!</p>
-          <img src="images/reversible-plaid.jpg" alt="Reversible plaid scarf">
-      </div>
-      <div class="item">  
-        <h2>Twill</h2>
+          <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+          <img srcset="images/reversible-plaid-1280w.jpg 1280w, images/reversible-plaid-800w.jpg 800w, images/reversible-plaid-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/reversible-plaid-800w.jpg"
+              alt="Reversible plaid scarf!">
+        </div>
+        <div class="item">  
+          <h2>Twill</h2>
           <p>Warm as wool!</p>
           <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
-          <img src="images/twill.jpg" alt="Twill scarf">
-      </div>
-      <div class="item">  
-        <h2>Wool Cable</h2>
+          <img srcset="images/twill-1280w.jpg 1280w, images/twill-800w.jpg 800w, images/twill-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/twill-800w.jpg"
+              alt="twill scarf!">
+        </div>
+        <div class="item">  
+          <h2>Wool Cable</h2>
           <p>Fancy and warm!</p>
           <p>Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</p>
-          <img src="images/wool-cable.jpeg" alt="Wool cable scarf">
+          <img srcset="images/wool-cable-1280w.jpg 1280w, images/wool-cable-800w.jpg 800w, images/wool-cable-400w.jpg 400w"
+              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
+              src="images/wool-cable-800w.jpg"
+              alt="Wool cable scarf!">
+        </div>
       </div>
-    </div>
-  </section>
-  <script type="text/javascript" src="js/script.js">
-  </script>
- </body>
+    </section>
+  <script type="text/javascript" src="js/script.js"></script>
+  </body>
 </html>

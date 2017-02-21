@@ -48,15 +48,29 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ];
-/*
+
 for (i=0; i < products.length; i++) {
   
  console.log(products[i].name + products[i].price +  products[i].description);
 }
-*/
 
 
 function capture(){
  console.log(document.Filter.filter.value)
   event.preventDefault();
 }
+//TO DO: trigger on change of cart contents
+function sumPrices (cartArray){
+//for loop through array, sum value of price attribute for each object
+  var total = 0;
+  
+  for(var i=0; i<cartArray.length; i++){
+
+    //THIS LIST EACH PRODUCT PRICE:  console.log(cartArray[i].price);
+    if(cartArray[i].price){
+    total = total + cartArray[i].price;
+  } 
+  }
+  //TO DO: print total as HTML to page, next to cart icon
+  console.log(total);
+                     }

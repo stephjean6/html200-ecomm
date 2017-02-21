@@ -6,12 +6,11 @@ html {
 }
 body {
   margin: 0;
-}
+} 
 aside {
   flex-flow: row;
 }
 nav {
-  background-color: slateblue;
   width: 100%;
   font-size: 1.5rem;
 }
@@ -22,10 +21,15 @@ ul {
   overflow: hidden;
   display: flex;
 }
+ul i {
+  color: white;
+}
 header {
-  background-color: slateblue;
-  font-size: 1.2rem;
-  height: 30%;
+  background-image: url('../images/scarf-banner-cropped.jpg');
+  background-attachment: scroll;
+  background-position: center;
+  display: flex;
+  font-size: 1.5rem;
   width: 100%;
   padding: 1em;
   border: 0;
@@ -38,42 +42,48 @@ header a {
 header h1 {
   color: white;
   letter-spacing: 1px;
-  text-align: right;
+  text-align: center;
   font-size: 3rem;
   padding: 0;
  }
+section {
+  align-content: center;
+}
 h2 {
-  color: slateblue;
+  color: darkslateblue;
   font-size: 4rem;
-  align-content:center;
+  align-content: center;
   text-align: center;
 }
-div.item-container {
-  background-color: lightsteelblue;
-  opacity: 50%;
+.item-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-flow: column wrap;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 20px;
+  background-color: white;
+  overflow: auto;
 }
-div.item {
-  color: lightsteelblue;
-  flex-wrap: wrap;
-  align-content: center;
-  max-width: 20em;
+.item {
+  padding: 20px;
+  border: 2px solid lightgray;
+  width: 75%;
 }
-div.item p {
+.item p {
   font-size: 1rem;
   color: dimgray;
-  align-content: center;
+  padding: 5px;
 }
-div.item h2{
-  font-size: 1.5rem;
-  color: slateblue;  
+.item h2 {
+  font-size: 2.5rem;
+  color: slateblue;
 }
-div.item img {
-  max-width: 10em;
-  height: auto;
-  align-items: stretch;
+.item img {
+  max-width: 60%;
+}
+.item img:hover {
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
 }
