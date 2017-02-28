@@ -6,6 +6,7 @@ html {
 }
 body {
   margin: 0;
+  background: lightgray;
 } 
 aside {
   flex-flow: row;
@@ -45,15 +46,21 @@ header h1 {
   text-align: center;
   font-size: 3rem;
   padding: 0;
- }
+}
 section {
   align-content: center;
+  background-color: whitesmoke;
 }
 h2 {
   color: darkslateblue;
   font-size: 4rem;
   align-content: center;
   text-align: center;
+}
+@media only screen and (max-width: 200px) { 
+  aside {
+    background-color: darkseagreen;
+  }
 }
 .item-container {
   display: flex;
@@ -62,13 +69,14 @@ h2 {
   justify-content: center;
   text-align: center;
   padding: 20px;
-  background-color: white;
+  background-color: whitesmoke;
   overflow: auto;
 }
 .item {
   padding: 20px;
   border: 2px solid lightgray;
   width: 75%;
+  background-color: white;
 }
 .item p {
   font-size: 1rem;
