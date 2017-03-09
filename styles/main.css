@@ -23,14 +23,23 @@ ul {
   overflow: hidden;
   display: flex;
   flex-flow: wrap;
+  justify-content: flex-end;
 }
 ul i {
   color: white;
+}
+@media only screen and (max-width: 600px) {
+ul {
+  justify-content: flex-start;
+  flex-flow: wrap;
+  padding: 1rem;
+  }  
 }
 header {
   background-image: url('../images/scarf-banner-cropped.jpg');
   background-attachment: scroll;
   background-position: center;
+  background-repeat: repeat-x;
   display: flex;
   flex-flow: wrap;
   font-size: 1.5rem;
@@ -42,17 +51,26 @@ header a {
   font-size: 1.2rem;
   color: white; 
   padding: 0 1em 5em 0;
+  align-content: space-around;
+}
+li a:active {
+  color: limegreen;
+}
+@media only screen and (max-width: 600px) {
+header {
+  justify-content: center;
+  }  
 }
 h1 {
   color: white;
   letter-spacing: 1px;
   text-align: center;
   font-size: 3rem;
-  padding: 2rem;
+  /*padding: 2rem;*/
 }
 @media only screen and (max-width: 600px) { 
   h1 {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold; 
     text-transform: uppercase;
     padding: 1rem;
@@ -95,22 +113,30 @@ h2 {
   font-size: 1rem;
   color: dimgray;
   padding: 5px;
-}
+  }
 .item h2 {
   font-size: 2.5rem;
   color: slateblue;
-}
-.item img {
-  max-width: 60%;
-}
-.item img:hover {
-    cursor: default;
-    transform: rotate(360deg);
-    transition: all 0.3s ease-in-out 0s;
 }
 @media only screen and (max-width: 600px) { 
   .item h2 {
     font-size: 1rem;
     font-weight: bold; 
   }
+}
+.item img {
+  max-width: 60%;
+}
+@media only screen and (max-width: 600px) {
+  .item img:hover {
+    cursor: default;
+    transform: scale(2);
+  }
+}
+input[type="button"] {
+  padding: 5px;
+  margin: 5px;
+}
+input[type="button"]:hover {
+  background-color: mediumseagreen;
 }
