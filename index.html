@@ -25,15 +25,15 @@
         <ul>
           <li><a href="#">Hats</a></li>
           <li><a href="#">Gloves</a></li>
-          <li><a href="#">Scarves</a></li>
+          <li><a href="#index">Scarves</a></li>
           <li class="cart-info">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </li>
         </ul>
       </nav>
+      <img src="images/logo-scarfcat.png" alt="image of cat as winter wear warehouse logo">
       <h1>Winter Wear Warehouse</h1>
     </header>
-
     <aside>
       <form name="Filter" onSubmit="capture();">
         <label>Filter By:
@@ -50,36 +50,41 @@
       <h2>Scarves</h2>
       <div class="item-container">
         <div class="item">
-          <h2>Etro</h2>
-          <p>Best blue scarf ever...soft as silk!</p>
+          <h2>Etro Paisley-Print Silk</h2>
           <p>Luxurious silk scarf with subtle paisley pattern. 100% silk</p>
-          <img srcset="images/etro-1280w.png 1280w, images/etro-800w.png 800w, images/etro-400w.png 400w"
-              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
-              src="images/etro-800w.png"
-              alt="Etro scarf!">
+          <p>$249.99
+            <button onclick="addRemoveItem('Etro');">+/-</button>
+          </p>
+          <img srcset="images/etro-1280w.png 1280w, images/etro-800w.png 800w, images/etro-400w.png 400w"        sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"            src="images/etro-800w.png"
+               alt="Etro scarf!">
         </div> 
         <div class="item">
           <h2>Fringed-Plaid</h2>
-          <p>Make your fellow Scotsman proud!</p>
           <p>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
+          <p>$18.99&nbsp;&nbsp;
+            <button onclick="addRemoveItem('Fringed');">+/-</button>
+          </p>
           <img srcset="images/fringed-plaid-1280w.jpg 1280w, images/fringed-plaid-800w.jpg 800w, images/fringed-plaid-400w.jpg 400w"
               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
               src="images/fringed-plaid-800w.jpg"
-              alt="Fringed-plaid scarf!">     
+              alt="Fringed-plaid scarf!">
         </div>
         <div class="item">
           <h2>Multi-color</h2>
-          <p>Magnificent orange</p>
           <p>This scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit. Soft and lush, it is your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic</p>
-          <img srcset="images/multi-color-1280w.jpg 1280w, images/multi-color-800w.jpg 800w, images/multi-color-400w.jpg 400w"
-              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
-              src="images/multi-color-800w.jpg"
-              alt="Multi-color scarf!"> 
+          <p>$22.99&nbsp;&nbsp;
+            <button onclick="addRemoveItem('Multi');">+/-</button>
+          </p>
+          <img srcset="images/multi-color-1280w.jpg 1280w, images/multi-color-800w.jpg 800w, images/multi-color-400w.jpg 400w" 
+               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px" src="images/multi-color-800w.jpg"
+               alt="Multi-color scarf!"> 
         </div>
         <div class="item">
           <h2>Northern Lights</h2>
-          <p>Sublime!</p>
           <p>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</p>
+          <p>$29.99 &nbsp;&nbsp;
+            <button onclick="addRemoveItem('Northern');">+/-</button>
+          </p>
           <img srcset="images/northern-lights-1280w.jpg 1280w, images/northern-lights-800w.jpg 800w, images/northern-lights-400w.jpg 400w"
               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
               src="images/northern-lights-800w.jpg"
@@ -87,8 +92,10 @@
         </div>
         <div class="item">
           <h2>Ombre Infinity</h2>
-          <p>It's neverending!</p>
           <p>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</p>
+          <p>$11.99&nbsp;&nbsp;
+            <button onclick="addRemoveItem('Ombre');">+/-</button>
+          </p>
           <img srcset="images/ombre-infinity-1280w.jpg 1280w, images/ombre-infinity-800w.jpg 800w, images/ombre-infinity-400w.jpg 400w"
               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
               src="images/ombre-infinity-800w.jpg" 
@@ -96,30 +103,35 @@
         </div>
         <div class="item">
           <h2>Reversible Plaid</h2>
-          <p>Two scarves in one!</p>
           <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+          <p>$26.99&nbsp;&nbsp;
+            <button onclick="addRemoveItem('Reversible');">+/-</button>
+          </p>
           <img srcset="images/reversible-plaid-1280w.jpg 1280w, images/reversible-plaid-800w.jpg 800w, images/reversible-plaid-400w.jpg 400w"
               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
               src="images/reversible-plaid-800w.jpg"
               alt="Reversible plaid scarf!">
         </div>
         <div class="item">  
-          <h2>Twill</h2>
-          <p>Warm as wool!</p>
+          <h2>Ashby Twill</h2>
           <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
+          <p>$70.99 &nbsp;&nbsp;
+            <button onclick="addRemoveItem('Ashby');">+/-</button>
+          </p>
           <img srcset="images/twill-1280w.jpg 1280w, images/twill-800w.jpg 800w, images/twill-400w.jpg 400w"
               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
               src="images/twill-800w.jpg"
               alt="twill scarf!">
         </div>
         <div class="item">  
-          <h2>Wool Cable</h2>
-          <p>Fancy and warm!</p>
+          <h2>Wool Cable Knit</h2>
           <p>Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</p>
-          <img srcset="images/wool-cable-1280w.jpg 1280w, images/wool-cable-800w.jpg 800w, images/wool-cable-400w.jpg 400w"
-              sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px"
-              src="images/wool-cable-800w.jpg"
-              alt="Wool cable scarf!">
+          <p>$49.99 &nbsp;&nbsp;
+            <button onclick="addRemoveItem('Wool');">+/-</button>
+          </p>
+          <img srcset="images/wool-cable-1280w.jpg 1280w, images/wool-cable-800w.jpg 800w, images/wool-cable-400w.jpg 400w" 
+               sizes="(max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1200px" src="images/wool-cable-800w.jpg" 
+               alt="Wool cable scarf!">
         </div>
       </div>
     </section>
