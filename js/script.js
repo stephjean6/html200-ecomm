@@ -59,6 +59,12 @@ function capture(){
  console.log(document.Filter.filter.value)
   event.preventDefault();
 }
+
+//create array that will hold all ordered products
+    var shoppingCart = [];
+
+//Add to cart function
+
 //TO DO: trigger on change of cart contents
 function sumPrices (cartArray){
 //for loop through array, sum value of price attribute for each object
@@ -71,6 +77,58 @@ function sumPrices (cartArray){
     total = total + cartArray[i].price;
   } 
   }
-  //TO DO: print total as HTML to page, next to cart icon
+//TO DO: print total as HTML to page, next to cart icon
   console.log(total);
-                     }
+  }
+
+
+// This section should be very similar to what you'll write  
+2 // for adding/removing items to cart in homework 
+//3 var cart = [{name: "yes"}, {name: "no"}] 
+//4 
+// 
+//5 function clicker(fortune){ 
+//6    
+//7   var i = cart.findIndex(function(el){ 
+//8     return el.name.toLowerCase() == fortune  
+//9   }); 
+//10    
+//11   // if i >= 0  
+//12   // splice to get it out of the array 
+//13   // else  
+//14   // push it into the array 
+//15    
+//16   console.log(i); 
+//17 } 
+var cart = [];
+
+function addRemoveItem(name){
+  var index = cart.indexOf(name);
+  if index >= 0 {
+    cart.splice(index, 1);
+  } else {
+    cart.push(name);
+  }
+  console.log(cart);
+}
+
+
+function compareNames (a,b){
+  var nameA = a.name.toUpperCase(); 
+  var nameB = b.name.toUpperCase();
+  if (nameA < nameB){
+    return -1;
+  }
+  if (nameA >nameB){
+    return 1;
+  }
+  return 0;
+}
+function sortByName(){
+  var sortedArray= products.sort(compareNames);
+  return sortedArray;
+}
+
+function sortByPrice(){
+  
+}
