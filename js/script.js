@@ -54,10 +54,38 @@ for (i=0; i < products.length; i++) {
  console.log(products[i].name + products[i].price +  products[i].description);
 }
 
+var cart = [];
 
-function capture(){
- console.log(document.Filter.filter.value)
-  event.preventDefault();
+function addRemoveItem(name){
+  var index = cart.indexOf(name);
+  if (index >= 0) {
+    cart.splice(index, 1);
+  } else {
+    cart.push(name);
+  }
+  console.log(cart);
+}
+
+function compareNames (a,b){
+  var nameA = a.name.toUpperCase(); 
+  var nameB = b.name.toUpperCase();
+  if (nameA < nameB){
+    return -1;
+  }
+  if (nameA >nameB){
+    return 1;
+  }
+    return 0;
+}
+
+function sortByName(){
+  var sortedArray= products.sort(compareNames);
+  return sortedArray;
+}
+
+function sortByPrice(){
+  var sortedArray= products.sort(comparePrices);
+  return sortedArray;
 }
 
 function sumPrices (cartArray){
@@ -74,43 +102,18 @@ function sumPrices (cartArray){
   console.log(total);
 }
 
-
-
-
-var cart = [];
-
-function addRemoveItem(name){
-  var index = cart.indexOf(name);
-  if index >= 0 {
-    cart.splice(index, 1);
-  } else {
-    cart.push(name);
-  }
-  console.log(cart);
-}
-
-
-function compareNames (a,b){
-  var nameA = a.name.toUpperCase(); 
-  var nameB = b.name.toUpperCase();
-  if (nameA < nameB){
-    return -1;
-  }
-  if (nameA >nameB){
-    return 1;
-  }
-  return 0;
-}
-function sortByName(){
-  var sortedArray= products.sort(compareNames);
-  return sortedArray;
-}
-function formSumbit(){
+function capture(){
   var sortBy = "price";
-  
-  if sortBy == "price"{
-    sortByPrice();
+  var sortedArray;
+  if (sortBy == "price"){
+    sortedArray = sortByPrice();
   } else {
-    sortByName();
+    sortedArray = sortByName();
   }
+
+  console.log(sortedArray);
+  
+  event.preventDefault();
 }
+
+//console.log(document.Filter.filter.value)
